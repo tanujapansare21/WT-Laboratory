@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="cal2.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" id="res" readonly>
+        </div>
+        <div class="buttons">
+            <button class="btn special" onclick="Clear()">C</button>
+            <button class="btn special" onclick="Back()">←</button>
+            <button class="btn operator" onclick="Solve('%')">%</button>
+            <button class="btn operator" onclick="Solve('/')">÷</button>
+
+            <button class="btn" onclick="Solve('7')">7</button>
+            <button class="btn" onclick="Solve('8')">8</button>
+            <button class="btn" onclick="Solve('9')">9</button>
+            <button class="btn operator" onclick="Solve('*')">×</button>
+
+            <button class="btn" onclick="Solve('4')">4</button>
+            <button class="btn" onclick="Solve('5')">5</button>
+            <button class="btn" onclick="Solve('6')">6</button>
+            <button class="btn operator" onclick="Solve('-')">−</button>
+
+            <button class="btn" onclick="Solve('1')">1</button>
+            <button class="btn" onclick="Solve('2')">2</button>
+            <button class="btn" onclick="Solve('3')">3</button>
+            <button class="btn operator" onclick="Solve('+')">+</button>
+
+            <button class="btn" onclick="Solve('00')">00</button>
+            <button class="btn" onclick="Solve('0')">0</button>
+            <button class="btn" onclick="Solve('.')">.</button>
+            <button class="btn equal" onclick="Result()">=</button>
+        </div>
+    </div>
+    <script src="cal2.js"></script>
+</body>
+</html>
