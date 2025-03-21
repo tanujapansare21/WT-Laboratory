@@ -1,0 +1,43 @@
+<p>registration works!</p>
+
+<form (ngSubmit)="completeRegistration()">
+    <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname" required>
+    </div>
+    <div>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname" required>
+    </div>
+    <div>
+        <label for="mobile">Mobile No.:</label>
+        <input type="tel" id="mobile" name="mobile" [(ngModel)]="mobile" required pattern="[0-9]{10}">
+    </div>
+    <div>
+        <label for="altmobile">Alternate Mobile No.:</label>
+        <input type="tel" id="altmobile" name="altmobile" [(ngModel)]="altmobile" pattern="[0-9]{10}">
+    </div>
+    <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="address" required>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+        <label for="altemail">Alternate Email:</label>
+        <input type="email" id="altemail" name="altemail" [(ngModel)]="altemail">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required minlength="6">
+    </div>
+    <button type="submit">Register</button>
+    <p>Already have an account?</p>
+    <button type="button" (click)="redirectToLogin()">Login</button>
+</form>

@@ -1,0 +1,38 @@
+.component.html
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" 
+               id="username" 
+               name="username" 
+               [(ngModel)]="username" 
+               required
+               placeholder="Enter your email">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" 
+               id="password" 
+               name="password" 
+               [(ngModel)]="password" 
+               required
+               placeholder="Enter your password">
+      </div>
+  
+      <div *ngIf="showError" class="error-message">
+        {{ errorMessage }}
+      </div>
+  
+      <button type="submit" [disabled]="!username || !password">Login</button>
+      
+      <div *ngIf="loginSuccessful" class="success-message">
+        <p>Login successful! Redirecting...</p>
+      </div>
+
+      <p class="register-text">Don't have an account?</p>
+      <button type="button" (click)="redirectToRegister()">Register</button>
+    </form>
+</div>
